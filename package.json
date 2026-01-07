@@ -4,8 +4,8 @@
   "description": "[![Actions Status](https://github.com/ARMINEPAL/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ARMINEPAL/frontend-project-44/actions)",
   "bin": {
     "brain-games": "bin/brain-games.js"
-  }, 
- "homepage": "https://github.com/ARMINEPAL/frontend-project-44#readme",
+  },
+  "homepage": "https://github.com/ARMINEPAL/frontend-project-44#readme",
   "bugs": {
     "url": "https://github.com/ARMINEPAL/frontend-project-44/issues"
   },
@@ -19,5 +19,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
