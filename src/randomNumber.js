@@ -1,5 +1,5 @@
-function randomIntFromInterval(min, max) { 
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+function randomIntFromInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
-  export default randomIntFromInterval
+export default randomIntFromInterval
