@@ -32,6 +32,7 @@ cd frontend-project-44
 3) Установите зависимости
 
 npm ci
+
 4) Установите проект 
 
 npm link
