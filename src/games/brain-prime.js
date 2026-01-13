@@ -1,5 +1,5 @@
 import mainEngine from '../index.js'
-import randomIntFromInterval from '../randomNumber.js'
+import _ from 'lodash'
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
@@ -12,7 +12,7 @@ const isPrime = (num) => {
 }
 
 const getQuestionAndAnswer = () => {
-  const question = randomIntFromInterval(0, 100)
+  const question = _.random(0, 100)
   const questionRight = isPrime(question)
   return [question, questionRight]
 }

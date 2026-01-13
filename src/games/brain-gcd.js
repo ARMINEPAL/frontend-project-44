@@ -1,5 +1,5 @@
 import mainEngine from '../index.js'
-import randomIntFromInterval from '../randomNumber.js'
+import _ from 'lodash'
 
 const description = 'Find the greatest common divisor of given numbers.'
 
@@ -12,8 +12,8 @@ const gcd = (num1, num2) => {
   return num1
 }
 const getQuestionAndAnswer = () => {
-  const num1 = randomIntFromInterval(0, 100)
-  const num2 = randomIntFromInterval(0, 100)
+  const num1 = _.random(0, 100)
+  const num2 = _.random(0, 100)
   const question = `${num1} ${num2}`
   const questionRight = gcd(num1, num2)
   return [question, questionRight]

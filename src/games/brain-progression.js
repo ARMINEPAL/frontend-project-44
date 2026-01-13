@@ -1,5 +1,5 @@
 import mainEngine from '../index.js'
-import randomIntFromInterval from '../randomNumber.js'
+import _ from 'lodash'
 
 const description = 'What number is missing in the progression?'
 
@@ -18,11 +18,11 @@ const missedElement = (elements, index) => {
 }
 
 const getQuestionAndAnswer = () => {
-  const start = randomIntFromInterval(0, 10)
-  const step = randomIntFromInterval(1, 10)
-  const numbersCount = randomIntFromInterval(5, 10)
+  const start = _.random(0, 10)
+  const step = _.random(1, 10)
+  const numbersCount = _.random(5, 10)
   const elements = progression(start, step, numbersCount)
-  const index = randomIntFromInterval(0, elements.length - 1)
+  const index = _.random(0, elements.length - 1)
   const question = missedElement([...elements], index).join(' ')
   const questionRight = elements[index]
   return [question, questionRight]

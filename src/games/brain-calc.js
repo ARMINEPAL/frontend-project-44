@@ -1,5 +1,5 @@
 import mainEngine from '../index.js'
-import randomIntFromInterval from '../randomNumber.js'
+import _ from 'lodash'
 
 const description = 'What is the result of the expression?'
 
@@ -26,9 +26,9 @@ const operation = (num1, num2, operator) => {
 }
 
 const getQuestionAndAnswer = () => {
-  const num1 = randomIntFromInterval(0, 10)
-  const num2 = randomIntFromInterval(0, 10)
-  const operator = operators[randomIntFromInterval(0, 2)]
+  const num1 = _.random(0, 10)
+  const num2 = _.random(0, 10)
+  const operator = operators[_.random(0, 2)]
   const question = `${num1} ${operator} ${num2}`
   const questionRight = operation(num1, num2, operator)
   return [question, questionRight]
