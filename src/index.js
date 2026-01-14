@@ -1,14 +1,12 @@
 import readlineSync from 'readline-sync'
+import greeting from './cli.js'
+
+const roundCounts = 3
 
 const mainEngine = (getQuestionAndAnswer, description) => {
-  console.log ('Welcome to the Brain Games!')
-
-  const name = readlineSync.question('May I have your name?: ')
-
-  console.log (`Hello, ${name}`)
+  const name = greeting()
   console.log(description)
 
-  const roundCounts = 3
   for (let i = 1; i <= roundCounts; i += 1) {
     const [question, questionRight] = getQuestionAndAnswer()
 
